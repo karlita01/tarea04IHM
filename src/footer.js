@@ -1,13 +1,44 @@
 const Footer = () => {
     return <footer>
-       <div className="py-5">
-            <img src="https://i.pinimg.com/736x/c0/b0/98/c0b098dfcef345434b3559fe24f3c37c.jpg"
-                   class="rounded float-start" alt="..." />
-     
-            <img src="https://i.pinimg.com/736x/89/12/59/891259e1836c28876c8b9a3defc540f2.jpg"
-                    class="rounded float-center" alt="..." />   
-             
-        
+       <div className="container-fluid bg-primary-subtle">
+            <div className= "row text-center">
+                <div className= "md-col-12">
+                    <br></br>
+                    <p>SÍGUENOS AQUÍ</p>
+                    
+                </div>
+                
+                
+            </div> 
+
+            <div className = "row text-center">
+                <div className= "col-md-3">    
+                    <a href="https://www.facebook.com/" target="_blank"> <i data-feather="facebook"/> </a> 
+                </div>
+                
+                <div className= "col-md-3">    
+                <a href="https://www.instagram.com/" target="_blank"> <i data-feather="instagram"/> </a> 
+                </div>
+
+                <div className= "col-md-3">    
+                <a href="https://www.X.com/" target="_blank">  <i data-feather="at-sign"/> </a> 
+                </div>
+
+                <div className= "col-md-3">    
+                <a href="https://www.twitter.com/" target="_blank"> <i data-feather="twitter"/>  </a> 
+                </div>
+                
+            </div>
+
+            <div className= "row text-center">
+                <div className= "md-col-12">
+                    <p> Copyright © 2024 Karlita</p>
+                    <p>Web diseñada por Karlita Yerlin Baltodano León</p>
+                </div>
+                
+                
+            </div>
+
         </div>
         
     </footer>;

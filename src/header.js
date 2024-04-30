@@ -1,49 +1,51 @@
-const Header = () => {
-    return <header>        
-        <div class="p-3 text-Light-emphasis bg-success">
-        <h1 class="text-center">SPORT SHOP</h1>
-        </div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+function Header() {
+  return (
+    
+    <Navbar expand="lg" className="bg-body-secondary">
+      <Container fluid>
+        <Navbar.Brand href="#"><i data-feather="globe"/> Nosotros</Navbar.Brand>
+        <Navbar.Toggle aria-controls="nosotros" />
+        <Navbar.Collapse id="nosotros">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >
+            <Nav.Link href="#action1">Conjuntos</Nav.Link>
+            <Nav.Link href="#action2">Legging</Nav.Link>
+            <Nav.Link href="#action3" >Ofertas</Nav.Link>
+            <NavDropdown title="Conjuntos" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action4">Enterizo</NavDropdown.Item>
+              <NavDropdown.Item href="#action5">Dos prendas</NavDropdown.Item>
+              <NavDropdown.Item href="#action6">Tres prendas</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action7">Todo</NavDropdown.Item>
+            </NavDropdown>
+            
+          </Nav>
           
-                    <div class="container-fluid">
-                      <a class="navbar-brand" href="#">Home</a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                          <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Novedades</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">Curvy</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">Tops</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">Shorts</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">Leggings</a>
-                          </li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Categorias
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Ofertas</a></li>
-                              <li><a class="dropdown-item" href="#">Conjuntos largo</a></li>
-                              <li><a class="dropdown-item" href="#">Conjuntos cortos</a></li>
-                              <li><a class="dropdown-item" href="#">Liquidación</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
-        
-    </header>;
+          
+          <i data-feather="search"/>
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search" 
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
 export default Header;
