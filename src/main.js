@@ -1,43 +1,36 @@
 import Carousel from 'react-bootstrap/Carousel';
+import { useNavigate } from "react-router-dom";
+import Imagen from './data/imagen.json'
 
-function Main() {
-  return (
-    <Carousel data-bs-theme="dark">
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://i.pinimg.com/564x/37/6f/73/376f733e325f1c3719efcb8b82786f91.jpg"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h2>COLECCIÓN INVIERNO - PRIMAVERA</h2>
-          <p className='fs-4'>Small, Medium, Large</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://i.pinimg.com/564x/57/e0/0a/57e00a980a70ba979f31d1a9ce0ee5bf.jpg"
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-        <h2>COLECCIÓN INVIERNO - PRIMAVERA</h2>
-          <p className='fs-4'>Small, Medium, Large</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://i.pinimg.com/564x/78/b2/fa/78b2fad3e8cc62155697eb7e0d55ad25.jpg"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-        <h2>COLECCIÓN INVIERNO - PRIMAVERA</h2>
-          <p className='fs-4'>Small, Medium, Large</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
+const feather = require('feather-icons');
+
+
+const Main = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (slug) => {
+      navigate("/detalle/" + slug);
+  }
+
+  return <main>
+      <Carousel>
+          {
+              Imagen.map(it => {
+                  return (<Carousel.Item onClick={(e) => {
+                      e.preventDefault(); handleClick(it.slug)
+                  }}>
+                    
+                      <img className='w-100 dark-image' src={it.picture}></img>
+                      <Carousel.Caption>
+                          <h3>{it.name}</h3>
+                          <p>{it.description}</p>
+                          <button className="btn btn-primary" >Ver detalle</button>
+                      </Carousel.Caption>
+                  </Carousel.Item>);
+              })
+          }
+      </Carousel>
+  </main >;
 }
 
 export default Main;

@@ -1,0 +1,31 @@
+[
+    {
+        
+        "name": "COLECCIÓN INVIERNO - PRIMAVERA",
+        "slug": "imagen-1",
+        "description": "¡Alcanza tus metas de fitness con estilo y comodidad con nuestro conjunto |FlexFit| para mujer! Este conjunto de alta calidad está diseñado para ofrecer un rendimiento óptimo mientras te ves y te sientes genial.",
+        "description2": "TALLAS: S | M | L",
+        "description3": "Más de 5 colores disponibles",
+        "picture": "https://i.pinimg.com/564x/82/4c/0c/824c0c744b2772655b2180367c431134.jpg"
+    },
+
+    {
+        "name": "COLECCIÓN INVIERNO - PRIMAVERA",
+        "slug": "imagen-2",
+        "description": "Conjuntos deportivos perfectos para deporte.",
+        "description2": "TALLAS: S | M | L",
+        "description3": "Más de 5 colores disponibles",
+        "picture": "https://i.pinimg.com/564x/57/53/e2/5753e2dc8434592b338209a1a1c171d4.jpg"
+    },
+
+    {
+        "name": "COLECCIÓN INVIERNO - PRIMAVERA",
+        "slug": "imagen-3",
+        "description": "Conjuntos deportivos perfectos para deporte.",
+        "description2": "TALLAS: S | M | L",
+        "description3": "Más de 5 colores disponibles",
+        "picture": "https://i.pinimg.com/564x/78/b2/fa/78b2fad3e8cc62155697eb7e0d55ad25.jpg"
+    }
+
+
+]
