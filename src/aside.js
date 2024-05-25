@@ -1,6 +1,6 @@
 
 const Aside = () => {
-    return <aside>    
+    return <aside className="border p-4 rounded color-header">    
       <form>   
           <div class="mb-3">            
                   <label for="exampleInputUsuario1" class="form-label"> Usuario <i data-feather="user"/></label>
@@ -25,7 +25,7 @@ const Aside = () => {
           </div> 
           
           <div class="mb-3">                 
-                  <button type="submit" class="btn btn-primary">INGRESAR <i data-feather="send"/></button>
+                  <button type="submit" className="botones">INGRESAR <i data-feather="send"/></button>
           </div>  
       </form>
     </aside>;

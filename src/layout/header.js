@@ -4,46 +4,68 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import '../style.css';
+import React from 'react';
 
 function Header () {
   return (
-        
-    <header style={{ textAlign: 'center' }}>
-        <div className="color-header bg-secondary">
-        <h1><p class="text-white bg-dark">FIT WOMEN</p></h1>
-            
-            
-        </div>
+            <Navbar expand="lg" className="color-header">   
+                  <Container fluid>  
+                        
+                        <div class=" row"></div>
+                              <div class=" col-2 centrar">
+                              <Navbar.Brand href="/"><img hrf="/" className="logomujer" src='https://i.pinimg.com/236x/8e/66/8a/8e668aa1b7a6523b91a4fbbbd57c2fdc.jpg'></img></Navbar.Brand>
+                              <Navbar.Brand href="/"><div className='negrita nombre'></div>WOMEN'S StoreFit</Navbar.Brand>          
+                              </div>
+                              
+                              <div class=" col-2"></div>
+                              <div class=" col-7">
+                                    <Navbar.Toggle aria-controls="navbarScroll" />
+                                          <Navbar.Collapse id="navbarScroll">           
+
+                                          <div class="col-2">
+                                                <button className="botonbarra centrar">
+                                                      <Nav.Link  href="#action4" className="nombre">Tendencia</Nav.Link>
+                                                </button>
+                                          </div>
+                                          <div class="col-2">
+                                                <button className="botonbarra centrar">
+                                                      <Nav.Link  href="#action0"className="nombre">Nuevo</Nav.Link>
+                                                </button>
+                                          </div>
+                                          <div class="col-2">
+                                                <button className="botonbarra centrar">
+                                                      <Nav.Link  href="#action1"className="nombre">Leggings</Nav.Link>
+                                                </button>    
+                                          </div>
+                                          <div class="col-2">
+                                                <button className="botonbarra centrar">
+                                                      <Nav.Link  href="#action2"className="nombre">Ofertas</Nav.Link>
+                                                </button>
+                                          </div>
+                                          <div class="col-3">                        
+                                                <button className="botonbarra centrar">     
+                                                      <NavDropdown className="nombre" title="Conjuntos" id="navbarScrollingDropdown">
+                                                      <NavDropdown.Item href="#action3" >Enterizo</NavDropdown.Item>
+                                                            <NavDropdown.Item href="#action5">Dos prendas</NavDropdown.Item>
+                                                            <NavDropdown.Item href="#action6">Tres prendas</NavDropdown.Item>
+                                                            <NavDropdown.Item href="#action7">Todo</NavDropdown.Item>
+                                                      </NavDropdown>
+                                                </button>
+                                          </div>
+                                    
+                                          </Navbar.Collapse>
+                              </div>
+                              <div class=" col-1"><Navbar.Brand href="/"><img hrf="/" className="logomujer" src='https://w7.pngwing.com/pngs/225/984/png-transparent-computer-icons-shopping-cart-encapsulated-postscript-shopping-cart-angle-black-shopping.png'></img></Navbar.Brand></div>
     
-        <Navbar expand="lg" className="container-fluid bg-primary-subtle">
-               
-        <div class="container-fluid">
-        <Link class="navbar-brand" to="/"><h3>Store</h3></Link>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-        
-        <Nav
-        className="me-auto my-2 my-lg-0"
-        style={{ maxHeight: '100px' }}
-        navbarScroll
-        >
-        <Nav.Link href="#action1">Leggings</Nav.Link>
-        <Nav.Link href="#action2">Ofertas</Nav.Link>
-        
-        <NavDropdown title="Conjuntos" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="#action3">Enterizo</NavDropdown.Item>
-                        <NavDropdown.Item href="#action5">Dos prendas</NavDropdown.Item>
-                        <NavDropdown.Item href="#action6">Tres prendas</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action7">Todo</NavDropdown.Item>
-        </NavDropdown>
-
-        </Nav>
-
-        </Navbar.Collapse>
-    </div>
-    </Navbar>
-    </header>
+                        
+                  </Container>
+                  
+            </Navbar>
+   
+   
+    
+    
     );
     }
 

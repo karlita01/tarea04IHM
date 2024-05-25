@@ -5,6 +5,7 @@ import Main from "./main";
 import Aside from "./aside";
 import Single from "./Single";
 import Basic from './layout/basic';
+import './style.css';
 import{
     createBrowserRouter,
     RouterProvider,
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
             {
                 path: '',
                 element: <>
+                    
                     <div className="col-md-7">
                         <Main></Main>
                     </div>
